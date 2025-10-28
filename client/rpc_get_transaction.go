@@ -139,6 +139,7 @@ func convertTransactionMeta(meta *rpc.TransactionMeta) (*TransactionMeta, error)
 				ProgramIDIndex: int(parsedInstruction["programIdIndex"].(float64)),
 				Accounts:       accounts,
 				Data:           data,
+				StackHeight:    uint16(parsedInstruction["stackHeight"].(float64)),
 			})
 		}
 
